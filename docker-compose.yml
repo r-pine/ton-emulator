@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  ton-emulator:
+    container_name: ton-emulator
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/output:z
