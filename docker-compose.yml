@@ -7,4 +7,9 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./output:/output:z
+      - ./output:/output
+    command: ["cp", "build/emulator/libemulator.so", "./output"]
+
+
+volumes:
+  output:
